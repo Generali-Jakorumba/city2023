@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragonHub</title>
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/c55ab1b8c9.js" crossorigin="anonymous"></script><!--FontAwesome kit for adding Icons-->
+
+    <style>
+        *{
+            margin:0;
+        }
+        body{
+            background-color: rgb(41, 14, 241);
+            font-family:'Times New Roman', Times, serif
+            bodybackground="homeland.png"
+        }
+        .header{
+            position:relative;
+            width: 100%;
+            background-color: rgb(249, 194, 30);
+            padding: 10x;
+            
+           
+            display: flex;
+
+           
+
+        }
+        
+        li a{
+            margin: 0 15px;
+            text-decoration: underline;
+            color: rgb(12, 21, 202);
+            font-size: 16px;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+        .nav-header{
+           -ms-flex-item-align: 
+           
+            list-style: none;
+
+            display: flex;
+            
+ center {
+             margin: auto; 
+             width: 50%;
+             border: 1px solid rgb(207, 210, 207);
+            padding: 10px;
+}
+
+
+        }
+        form{
+            background-color: rgb(194, 229, 247);
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 70px 50px;
+            font-size: 22px;
+            
+        
+        }
+        .form-control{
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .form-control label{
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-control input,
+        .form-control select{
+            border: 3px solid rgb(152, 153, 146);
+            border-radius: 8px;
+            padding: 15px;
+            width: 90%;
+            
+        }
+        .form-control input[type="radio"]{
+            display:inline;
+            width: auto;
+
+
+        }
+        h1{
+            color: rgb(18, 91, 181);
+        }
+
+          h2{
+                color: rgb(175, 18, 18);
+                background-color: rgb(248, 236, 9);
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 10px 5px;
+            font-size: 16px;
+            }
+
+            .form-control select{
+        
+            border: 3px solid rgb(152, 153, 146);
+            border-radius: 8px;
+            padding: 15px;
+            width: 20%;
+            }
+        
+        
+
+    </style>
+
+</head>
+
+<body>
+   <!--Navigation Bar-->
+  
+    
+
+   </div>
+   <header class="header">
+    <div><image src="emblem.png" alt="emblem"width="200" height="90"><br>
+    <ul class="nav-header">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Search</a></li>
+        <li><a href="">SignUp</a></li>
+        <li><a href="">Sign In</a></li>
+    </ul>
+
+    
+    </header>
+
+    <!--Survey Form-->
+    <form action="" method="" id="survey-form">
+        <h1>Counties Resources Distribution</h1>
+        <p colour:blue>This survey is intended to know the actual resource distribution in Kenya. Please fill each box with the right information.</p><br>
+        <p> All questions marked * must be answered.</p>
+        <p>Each participant must have consistently lived in Kenya for the past seven years.</p>
+        <div class="form-control">
+            
+       
+
+        <hr>
+
+        <label for="Date">Date and Time entry is made</label>
+            <input type="datetime-local">
+
+
+            <div class="form-control"></div><!--Telephone number added-->
+         <label for="national-ID">National ID Number</label>
+         <input type="text" id="national-ID" placeholder="Enter your ID or Passport Number">
+
+            <label for="date">Date of birth</label>
+            <input type="date" id="date">
+
+            <!--Calculate Current Age-->
+            <script>
+                
+
+                var dob = new Date("06/24/2008");
+                //calculate month difference from current date in time
+                var month_diff = Date.now() - dob.getTime();
+                
+                //convert the calculated difference in date format
+                var age_dt = new Date(month_diff); 
+                
+                //extract year from date    
+                var year = age_dt.getUTCFullYear();
+                
+                //now calculate the age of the user
+                var age = Math.abs(year - 1970);
+                
+                //display the calculated age
+                document.write("Age of the date entered: " + age + " years");
+            </script>
+            
+             
+        <div class="form-control">
+            <label for="gender">Choose your Gender</label>
+
+            <label for="gender_1">
+                <input type="radio" id="gender_1">Male</label>
+            
+            <label for="gender_2">
+                <input type="radio" name="gender_2">Female</label>
+            
+         </div>
+
+         <div class="form-control">
+            <label for="country of birth">Country of Birth</label>
+        <input type="text" id="country" placeholder="Indicate your Country of birth">
+         </div>
+         
+
+         <div class="form-control">
+            <label for="counties">Select your County of Birth </label>
+             <select name="counties" id="counties" placeholder="Only for Kenyan citizens by birth">
+                <option value="mombasa">Mombasa</option>
+                <option value="kilifi">Kilifi</option>
+                <option value="lamu">Lamu</option>
+                <option value="kwale">Kwale</option>
+                <option value="mandera">Mandera</option>
+                <option value="Garisa">Garisa</option>
+                <option value="kitui">Kitui</option>
+                <option value="machakos">Machakos</option>
+                <option value="kwale">Kwale</option>
+                <option value="kakamega">Kakamega</option>
+                <option value="bungoma">Bungoma</option>
+                <option value="transnzoia">Trans Nzoia</option>
+                <option value="busia">Busia</option>
+                <option value="vihiga">Vihiga</option>
+                <option value="meru">Meru</option>
+                <option value="murang'a">Murang'a</option>
+                <option value="embu">Embu</option>
+                <option value="tharanithi">Tharaka Nithi</option>
+                <option value="nairobi">Nairobi</option>
+                <option value="kiambu">Kiambu</option>
+                <option value="nakuru">Nakuru</option>
+                <option value="narok">Narok</option>
+                <option value="bomet">Bomet</option>
+                <option value="nyamira">Nyamira</option>
+                <option value="kericho">Kericho</option>
+                <option value="kisii">Kisii</option>
+                <option value="migori">Migori</option>
+                <option value="homabay">Homa Bay</option>
+                <option value="kisumu">Kisumu</option>
+                <option value="siaya">Siaya</option>
+                <option value="kajiado">Kajiado</option>
+                <option value="laikipia">Laikipia</option>
+                <option value="kirinyaga">Kirinyaga</option>
+                <option value="makueni">Makueni</option>
+                <option value="wajir">Wajir</option>
+                <option value="nandi">Nandi</option>
+                <option value="uasingishu">Uasin Gishu</option>
+            </select>
+            </div>
+            
+          <div class="form-control">
+            <label for="subcounty">Sub county of Birth</label>
+        <input type="text" id="subcounty" placeholder="Indicate your sub-county of birth">
+         </div>
+
+         <div class="form-control">
+            <label for="counties">Current county of residence </label>
+             <select name="counties" id="counties" placeholder="">
+                <option value="mombasa">Mombasa</option>
+                <option value="kilifi">Kilifi</option>
+                <option value="lamu">Lamu</option>
+                <option value="kwale">Kwale</option>
+                <option value="mandera">Mandera</option>
+                <option value="Garisa">Garisa</option>
+                <option value="kitui">Kitui</option>
+                <option value="machakos">Machakos</option>
+                <option value="kwale">Kwale</option>
+                <option value="kakamega">Kakamega</option>
+                <option value="bungoma">Bungoma</option>
+                <option value="transnzoia">Trans Nzoia</option>
+                <option value="busia">Busia</option>
+                <option value="vihiga">Vihiga</option>
+                <option value="meru">Meru</option>
+                <option value="murang'a">Murang'a</option>
+                <option value="embu">Embu</option>
+                <option value="tharanithi">Tharaka Nithi</option>
+                <option value="nairobi">Nairobi</option>
+                <option value="kiambu">Kiambu</option>
+                <option value="nakuru">Nakuru</option>
+                <option value="narok">Narok</option>
+                <option value="bomet">Bomet</option>
+                <option value="nyamira">Nyamira</option>
+                <option value="kericho">Kericho</option>
+                <option value="kisii">Kisii</option>
+                <option value="migori">Migori</option>
+                <option value="homabay">Homa Bay</option>
+                <option value="kisumu">Kisumu</option>
+                <option value="siaya">Siaya</option>
+                <option value="kajiado">Kajiado</option>
+                <option value="laikipia">Laikipia</option>
+                <option value="kirinyaga">Kirinyaga</option>
+                <option value="makueni">Makueni</option>
+                <option value="wajir">Wajir</option>
+                <option value="nandi">Nandi</option>
+                <option value="uasingishu">Uasin Gishu</option>
+            </select>
+            </div>
+
+            <div class="form-control">
+                <label for=" type of household">Select type of household</label>
+                <select name="household" id="household">
+                    <option value="self">Self-owned</option>
+                    <option value="rented">Rented</option>
+
+                    </select>
+                </div>
+
+
+            <div class="form-control">
+                <label for="household">Are you currently the head of this HouseHold?</label>
+                <select name="household" id="household">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+
+                    </select>
+                </div>
+
+
+         
+
+         
+            <div class="form-control">
+                <label for="household role">Choose your role in this household</label>
+    
+                <label for="grandfather">
+                <input type="radio" id="grandfather">Grandfather</label>
+                
+                <label for="grandmother">
+                 <input type="radio" name="grandmother">Grandmother</label>
+                 <label for="father">
+                <input type="radio" name="father">Father</label>
+                 <label for="mother">
+                 <input type="radio" name="mother">Mother</label>
+                 <label for="son">
+                 <input type="radio" name="son">Son</label>
+                 <label for="other">
+                    <input type="radio" name="other">Other</label>
+
+                    <div class="form-control">
+                        <label for="education">Select your Highest level of education</label>
+                        <select name="education" id="education">
+                            <option value="phd">PhD</option>
+                            <option value="masters">Masters</option>
+                            <option value="degree">Degree</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="certificate">Certificate</option>
+                            <option value="secondary-school">Secondary school</option>
+                            <option value="primary school">Primary school</option>
+                        </select>
+            
+                     </div>
+                        </div>
+    </form>
+
+    <div form action="/Action_page.php">
+        <label for="primary schools">How many primary schools are in your sub county?</label>
+        <input type="text" id="schools" name="primary schools" value="0"></form><br>
+        <label for="secondary schools">How many secondary schools are in your area?</label>
+        <input type="text" id="secondary schools" name="secondary schools" value="0"><br>
+        </div>
+        <hr>
+        <input type="submit" value="Submit">
+    
+      </form> 
+    
+</style>
+
+<hr>
+
+<div></div>
+
+
+    <!--Home Navigation form-->
+<form2 action="" method="" id="Navigation-form">
+    <h2>Other Quick Links</h2>
+    <div class="form-control"></div>
+
+    <li><a href="https://www.google.com/maps/@-0.0997591,34.7630199,15z?entry=ttu">Our Offices</a></li>
+    <li><a src href="https://accounts.ecitizen.go.ke/en/login">E-citizen;</a></li>
+    <li><a src href="https://ajiradigital.go.ke/#/index">Ajira Digital</a></li>
+    
+
+</body>
+    
+
+    </form>
+</body>
+
+</html>
